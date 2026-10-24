@@ -15,3 +15,4 @@ tracking your drinking coffee
     - Suche ✓
     - Installierbar ✓
 - *V8.5* - Sub Menü und Einträge lassen sich löschen
+- *V8.5b* - ohne Notiz
