@@ -14,4 +14,4 @@ tracking your drinking coffee
     - Nextcloud WebDAV echter Sync ✓
     - Suche ✓
     - Installierbar ✓
-- *V8.5* - Suv Menü und Einträge lassen sich löschen
+- *V8.5* - Sub Menü und Einträge lassen sich löschen
