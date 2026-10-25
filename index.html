@@ -34,4 +34,9 @@ function importJSON(e){let f=e.target.files[0];let r=new FileReader();r.onload=(
 function ncSave(s){let url=document.getElementById("ncUrl").value.trim().replace(/\/$/,""),u=document.getElementById("ncUser").value.trim(),p=document.getElementById("ncPass").value,pa=document.getElementById("ncPath").value;if(!url||!u||!p){if(!s)alert("Daten nötig");return}localStorage.setItem("nc_url",url);localStorage.setItem("nc_user",u);localStorage.setItem("nc_pass",p);localStorage.setItem("nc_path",pa);fetch(`${url}/remote.php/dav/files/${u}${pa}`,{method:"PUT",headers:{"Authorization":"Basic "+btoa(u+":"+p),"Content-Type":"application/json"},body:JSON.stringify(data)}).then(r=>document.getElementById("ncStatus").textContent=r.ok?"✓ gespeichert":"Fehler "+r.status)}
 function ncLoad(){let url=document.getElementById("ncUrl").value.trim().replace(/\/$/,""),u=document.getElementById("ncUser").value.trim(),p=document.getElementById("ncPass").value,pa=document.getElementById("ncPath").value;fetch(`${url}/remote.php/dav/files/${u}${pa}`,{headers:{"Authorization":"Basic "+btoa(u+":"+p)}}).then(r=>r.json()).then(j=>{data=j;saveLocal();render();document.getElementById("ncStatus").textContent="✓ geladen "+j.length})}
 setMode();render();
-</script></body></html>
+</script>
+
+<a href="https://mondlicht-und-sterne.github.io/meissen/" target="_blank">
+  <img src="https://img.shields.io/badge/MEISSEN-Veranstaltungen-f2f2f5?style=flat-square&labelColor=1a1a22&color=1a1a22" alt="Meißen Veranstaltungskalender">
+</a>
+</body></html>
